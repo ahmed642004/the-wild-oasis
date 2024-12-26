@@ -1,0 +1,3 @@
+const PAGE_SIZE = 10;
+const BREAKFAST_PRICE = 400;
+export { PAGE_SIZE, BREAKFAST_PRICE };
