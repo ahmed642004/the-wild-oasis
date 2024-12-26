@@ -24,7 +24,10 @@ import { useUser } from "./useUser";
 
 const UserAvatar = () => {
   const { user } = useUser();
-  const { avatar, fullName } = user.user_metadata;
+  const { avatar, fullName } = user?.user_metadata ?? {
+    fullName: "",
+    avatar: "default-user.jpg",
+  };
   return (
     <StyledUserAvatar>
       <Avatar

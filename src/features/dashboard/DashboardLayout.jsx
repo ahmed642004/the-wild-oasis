@@ -19,15 +19,13 @@ import TodayActivity from "../check-in-out/TodayActivity";
 const DashboardLayout = () => {
   const { bookings, isLoading } = useRecentBookings();
   const {
-    stays,
     confirmedStays,
     isLoading: isLoadingStays,
     numDays,
   } = useRecentStays();
-  console.log(confirmedStays);
   const { cabins, isLoading: isLoadingCabins } = useCabins();
   if (isLoading || isLoadingStays || isLoadingCabins) return <Spinner />;
-  console.log(confirmedStays);
+
   return (
     <StyledDashboardLayout>
       <Stats
